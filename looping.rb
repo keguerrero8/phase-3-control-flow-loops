@@ -1,6 +1,19 @@
+# require "pry"
+
 def happy_new_year
-  # your code here
+  counter = 10
+  until counter == -1
+    if counter > 0
+      puts counter
+    else
+      puts "Happy New Year!"
+    end
+    counter -= 1
+  end
 end
+
+# binding.pry
+
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
 def fizzbuzz(num)
@@ -16,9 +29,16 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  (1..100).each do |i|
+    puts fizzbuzz i
+  end
 end
 
 def reverse_string(str)
-  # your code here
+  reversed_word = ""
+  (0..str.length-1).each do |i|
+    reversed_word = str[i] + reversed_word
+  end
+  reversed_word
 end
+
